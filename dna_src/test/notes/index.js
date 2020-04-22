@@ -1,5 +1,5 @@
 module.exports = (scenario, conductorConfig) => {
-  scenario("create_note", async (s, t) => {
+  scenario("compare dna address with dna entry address", async (s, t) => {
     const {alice} = await s.players({alice: conductorConfig}, true)
     const DNA_ADDRESS = await alice.call("notes", "notes", "dna_address", {})
     const QUERIED_DNA_ADDRESS = await alice.call("notes", "notes", "queried_dna_address", {})
